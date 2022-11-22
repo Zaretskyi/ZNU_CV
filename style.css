@@ -3,7 +3,8 @@ html {
 }
 body {
     background-color: #323138;
-    color: #e4e4e4;
+    color: #e0e0e0;
+    padding: 5px 20px;
 }
 
 a {
@@ -36,4 +37,11 @@ table, th, td {
 }
 td, th {
     padding: 2px 5px;
+}
+
+#chart_div table {
+    color: #444444;
+}
+#chart_div table td { 
+    padding: 10px;
 }
