@@ -1,0 +1,39 @@
+html {
+    font-size: 16px;
+}
+body {
+    background-color: #323138;
+    color: #e4e4e4;
+}
+
+a {
+    color: rgb(159, 190, 133);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(71, 87, 58);
+}
+
+nav a {
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.big-text {
+    font-size: 2rem;
+}
+
+.small-text {
+    font-size: 0.8rem;
+}
+.semi-text {
+    font-size: 1.5rem;
+}
+table, th, td {
+    border: 1px solid #696969;
+}
+td, th {
+    padding: 2px 5px;
+}

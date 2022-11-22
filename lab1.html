@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { packages: ["orgchart"] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Name');
+            data.addColumn('string', 'Manager');
+            data.addColumn('string', 'ToolTip');
+
+            // For each orgchart box, provide the name, manager, and tooltip to show.
+            data.addRows([
+                [{ 'v': 'Mike', 'f': 'Mike<div style="color:red; font-style:italic">President</div>' },
+                    '', 'The President'],
+                [{ 'v': 'Jim', 'f': 'Jim<div style="color:red; font-style:italic">Vice President</div>' },
+                    'Mike', 'VP'],
+                ['Alice', 'Mike', ''],
+                ['Bob', 'Jim', 'Bob Sponge'],
+                ['Carol', 'Bob', '']
+            ]);
+
+            // Create the chart.
+            var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+            // Draw the chart, setting the allowHtml option to true for the tooltips.
+            chart.draw(data, { 'allowHtml': true });
+        }
+    </script>
+</head>
+
+<body>
+    <nav><a href="./index.html">Назад</a></nav>
+    <table class="semi-text">
+        <thead>
+            <tr>
+                <th>
+                    Автор
+                </th>
+                <th>
+                    Назва
+                </th>
+                <th>
+                    Призначено для спеціальності
+                </th>
+                <th>
+                    Кількість розділів
+                </th>
+                <th>
+                    Кількість сторінок
+                </th>
+                <th>
+                    Мова
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>Dr. Chris Bourke</td>
+                <td>Computer Science I </td>
+                <td>Комп’ютерні науки</td>
+                <td>3</td>
+                <td>647</td>
+                <td>Англійська</td>
+
+            </tr>
+            <tr>
+                <td>Shawn T. O'Neil</td>
+                <td>A PRIMER FOR COMPUTATIONAL BIOLOGY</td>
+                <td>Біологія</td>
+                <td>3</td>
+                <td>519</td>
+                <td>Англійська</td>
+            </tr>
+            <tr>
+                <td>В. Г. Іванов, В. В. Карасюк, М. В. Гвозденко</td>
+                <td>ОСНОВИ ІНФОРМАТИКИ ТА ОБЧИСЛЮВАЛЬНОЇ ТЕХНІКИ</td>
+                <td>Право</td>
+                <td>11</td>
+                <td>288</td>
+                <td>Українська</td>
+            </tr>
+            <tr>
+                <td>І.О.Яковлева</td>
+                <td>ОСНОВИ ІНФОРМАТИКИ</td>
+                <td>Інформатика та комп’ютерна техніка</td>
+                <td>8</td>
+                <td>188</td>
+                <td>Українська</td>
+            </tr>
+            <tr>
+                <td>І.Є. Булах, Ю.Є. Лях, В.П. Марценюк, І.І. Хаїмзон</td>
+                <td>Медична Інформатика</td>
+                <td>Лікувальна справа</td>
+                <td>4</td>
+                <td>309</td>
+                <td>Українська</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="chart_div"></div>
+</body>
+
+</html>
