@@ -45,3 +45,43 @@ td, th {
 #chart_div table td { 
     padding: 10px;
 }
+
+
+@keyframes link-animation {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.chapter-link {
+    display: inline-block;
+    color: rgb(235, 166, 110);
+    animation: 1s infinite linear link-animation;
+}
+
+.chapter-link:hover {
+    color: rgb(212, 131, 64);
+}
+
+.form {
+    background-color: #e0e0e0;
+    height: 400px;
+    overflow-y: auto;
+    width: 100%;
+}
+.results {
+    background-color: #e0e0e0;
+    height: 600px;
+    overflow-y: auto;
+    width: 100%;
+    padding: 0;
+    overflow-x: visible;
+}
