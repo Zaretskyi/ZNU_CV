@@ -77,6 +77,12 @@ td, th {
     overflow-y: auto;
     width: 100%;
 }
+.hotpotatoes {
+    background-color: #e0e0e0;
+    height: 640px;
+    overflow-y: auto;
+    width: 100%;
+}
 .results {
     background-color: #e0e0e0;
     height: 600px;
